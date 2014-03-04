@@ -1,9 +1,7 @@
-<div>FOOTBALL MANAGER2</div>
-<div>
-	
-	<% Player.all.each  do |p|%>
-		<%=p.name %>
-		<br/>
+<h3>FOOTBALL MANAGER</h3>
+<ul>
+	<% @players.each  do |p|%>
+		<li><%=p.name %></li>
 	<%end%>
-</div>
+</ul>
 
