@@ -4,7 +4,11 @@ class PlayersController < ApplicationController
   # GET /players
   # GET /players.json
   def index
+    if params[:search]
+      @players = Player.where("name LIKE ? OR number LIKE ?", "%#{params[:search]    }%", "%#{params[:search]}%")
+    else
     @players = Player.all
+  end
   end
 
   # GET /players/1

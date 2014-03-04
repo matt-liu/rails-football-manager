@@ -19,11 +19,12 @@ Then(/^I should see a list of the players information$/) do
 end
 
 
-When(/^I search for a player by their name and number$/) do
-	pending #fill_in('search', :with => 'Dan 1')
+When(/^I search for a player by their name$/) do
+	fill_in('search', :with => 'Dan')
 end
 
 
+
 Then(/^I see that player's information displayed$/) do
- 	pending #page.should have_content("Dan")
+ 	page.should have_content("Dan")
 end

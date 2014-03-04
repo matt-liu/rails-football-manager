@@ -58,5 +58,6 @@ RailsFootballManager::Application.routes.draw do
   
   root 'football_manager#index' 
   get '/footballmanager' => 'football_manager#index'
+  post '/footballmanager' => 'football_manager#search'
 
 end
