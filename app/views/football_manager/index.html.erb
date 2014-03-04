@@ -4,4 +4,5 @@
 
 <%= form_tag(players_path, method: 'get') do %>
   <%= text_field_tag :search, nil, placeholder: "Search by name or team number", id: 'search'  %>
+  <%= button_tag 'Search' %>
 <% end %>
