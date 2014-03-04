@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :player do
-    name "MyString"
-    team "MyString"
+    name "testName"
+    team "TW"
     number 1
-    age 1
+    age 25
   end
 end

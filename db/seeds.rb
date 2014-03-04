@@ -15,5 +15,8 @@
 #   "Stephen Winter"
 # ].each do |name|
 #   Player.create name: name
+
+Player.create(name: 'Dan', team: "TW", age: 27, number: 1)
+
+
   
-end
