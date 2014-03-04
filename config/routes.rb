@@ -1,4 +1,6 @@
 RailsFootballManager::Application.routes.draw do
+  resources :players
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,8 +55,8 @@ RailsFootballManager::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  resources :football_manager 
-  root 'football_manager#index'
+  
+  root 'football_manager#index' 
   get '/footballmanager' => 'football_manager#index'
 
 end

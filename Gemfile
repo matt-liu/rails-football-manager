@@ -34,12 +34,14 @@ end
 
 group :test, :development do 
 	gem 'capybara'
-	gem 'cucumber-rails'
+	gem 'cucumber-rails', :require => false
 	gem 'rspec'
+	gem 'rspec-rails'
 	gem 'pry'
 	gem 'factory_girl_rails'
 	gem 'factory_girl'
 	gem 'pry-rails'
+	gem 'database_cleaner'
 end
 
 # Use ActiveModel has_secure_password
