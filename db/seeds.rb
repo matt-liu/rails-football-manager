@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Player.destroy_all
+
+[
+  "Matt Liu",
+  "Dan Park",
+  "Nicolette Chambers",
+  "Julie Connors",
+  "Stephen Winter"
+].each do |name|
+  Player.create name: name
+  
+end

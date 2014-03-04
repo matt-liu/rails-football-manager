@@ -53,4 +53,9 @@ RailsFootballManager::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  resources :football_manager 
+  root 'football_manager#index'
+  get '/footballmanager' => 'football_manager#index'
+
 end
