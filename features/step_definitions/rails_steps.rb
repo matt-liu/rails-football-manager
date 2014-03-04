@@ -20,7 +20,12 @@ end
 
 
 When(/^I search for a player by their name$/) do
-	fill_in('search', :with => 'Dan')
+  fill_in('search', :with => 'Dan')
+  click_button('Search')
+end
+
+When(/^I search for a player by their number$/) do
+	fill_in('search', :with => '1')
 	click_button('Search')
 end
 
