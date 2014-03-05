@@ -1,0 +1,16 @@
+#mainTable{
+	width: 100%;
+}
+
+#mainRow{
+	vertical-align: baseline;
+}
+
+#playersColumn{
+	width: 50%
+}
+
+table .list{
+	min-width:80%;
+	text-align: center
+}

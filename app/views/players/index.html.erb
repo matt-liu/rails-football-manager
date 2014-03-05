@@ -1,6 +1,10 @@
+<table id='mainTable'>
+  <tr id='mainRow'>
+    <td id='playersColumn'>
+
 <h1>Players List</h1>
 
-<table>
+<table class='list' align='center'>
   <thead>
     <tr>
       <th>Name</th>
@@ -28,9 +32,13 @@
 <br>
 
 
+<%= link_to 'New Player', new_player_path %>
+</td>
+<td>
+
 <h1>Coaches List</h1>
 
-<table>
+<table class='list' align='center'>
   <thead>
     <tr>
       <th>Name</th>
@@ -53,7 +61,7 @@
   </tbody>
 </table>
 <br>
-<br>
-<br>
-<%= link_to 'New Player', new_player_path %>
 <%= link_to 'New Coach', new_coach_path %>
+</td>
+</tr>
+</table>

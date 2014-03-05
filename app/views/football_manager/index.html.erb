@@ -6,7 +6,7 @@
 		<div class="notice"><%= flash[:notice] %></div>
 	<% end %>
 
-	<table>
+	<table id=searchTable>
 	<tr>
 		<%= form_tag(players_path, method: 'get') do %>
 			<td>

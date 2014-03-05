@@ -22,7 +22,7 @@
  	background-color: midnightblue
  }
 
- table{
+ #searchTable{
  	position: absolute;
  	right: 10px;
  }
