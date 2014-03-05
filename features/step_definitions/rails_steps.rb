@@ -45,3 +45,13 @@ end
 Then(/^I see that player's information displayed$/) do
  	page.should have_content("Dan")
 end
+
+When(/^there is a coach named Bill$/) do
+  FactoryGirl.create(:coach)
+end
+
+Then(/^I should see a list of the coaches information$/) do
+  page.should have_content("Bill")
+  page.should have_content("Head")
+end
+

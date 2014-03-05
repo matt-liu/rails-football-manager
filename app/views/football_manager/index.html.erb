@@ -12,7 +12,7 @@
 			<td>
 			<%= text_field_tag :search, nil, placeholder: "Search by name or number", id: 'searchField', class: 'search'  %>
 		</td>
-		<td>	
+		<td>
 			<%= button_tag 'Search', id: 'searchButton', class: 'search button'%>
 		</td>
 		<% end %>
@@ -31,5 +31,5 @@
 	</tr>
 	</table>
 
-	<%= link_to "Players", players_path, id: 'players_id'%>
+	<%= link_to "Player and Coach Directory", players_path, id: 'players_id'%>
 </body>

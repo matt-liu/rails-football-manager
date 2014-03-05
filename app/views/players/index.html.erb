@@ -1,4 +1,4 @@
-<h1>Listing players</h1>
+<h1>Players List</h1>
 
 <table>
   <thead>
@@ -31,3 +31,34 @@
 <br>
 
 <%= link_to 'New Player', new_player_path %>
+
+<h1>Coaches List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coaches.each do |coach| %>
+      <tr>
+        <td><%= coach.name %></td>
+        <td><%= coach.team %></td>
+        <td><%= coach.title %></td>
+        <td><%= link_to 'Show', coach %></td>
+        <td><%= link_to 'Edit', edit_coach_path(coach) %></td>
+        <td><%= link_to 'Destroy', coach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'New Coach', new_coach_path %>

@@ -4,7 +4,7 @@ class PlayersController < ApplicationController
   # GET /players
   # GET /players.json
   def index
-
+      @coaches = Coach.all
     if params[:search]
       @players = Player.where("name LIKE ? OR number LIKE ?", "%#{params[:search] }%", "%#{params[:search]}%")
     else
