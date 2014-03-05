@@ -14,29 +14,39 @@
 
  h1{
  	border-radius: 5px;
- 	padding: 8px;
+ 	padding: 12px;
  	text-align: center;
  	margin-bottom: 5px;
 
  	color:white;
- 	background-color: pink
+ 	background-color: midnightblue
+ }
+
+ table{
+ 	position: absolute;
+ 	right: 10px;
+ }
+
+ .notice{
+ 	color: white;
+ 	background-color: firebrick;
+ 	border-radius: 5px;
+ 	text-align: center;
  }
 
  .search{
  	font-size: 110%;
- 	position:absolute;
  	border-radius: 5px;
  }
  
  #searchField{
 	min-width: 300px;
-	right:75px;
  }
 
- #searchButton{
- 	right:10px;
- 	border:none;
+ .button{
+ 	width:60px;
+  	border:none;
  	color:white;
- 	background-color: pink
+ 	background-color: midnightblue
  }
 
