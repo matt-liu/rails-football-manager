@@ -84,6 +84,9 @@ class PlayersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_player
       @player = Player.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+      flash[:notice] = "You do not belong here"
+      redirect_to root_path
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
