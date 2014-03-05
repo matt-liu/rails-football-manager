@@ -22,6 +22,11 @@
  	background-color: midnightblue
  }
 
+ h1 a:link {color:white; text-decoration: none}
+ h1 a:visited {color:white; text-decoration: none}
+ h1 a:hover {color:white; text-decoration: none}  
+ h1 a:active {color:white; text-decoration: none}  
+
  #searchTable{
  	position: absolute;
  	right: 10px;
@@ -39,8 +44,14 @@
  	border-radius: 5px;
  }
  
+@-moz-document url-prefix() {
+    #searchField {
+        min-width: 99%;
+    }
+}
+
  #searchField{
-	min-width: 300px;
+	width: 300px;
  }
 
  .button{
