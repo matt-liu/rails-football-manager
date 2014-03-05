@@ -23,7 +23,7 @@ describe PlayersController do
   # This should return the minimal set of attributes required to create a valid
   # Player. As you add validations to Player, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "name" => "MyString" } }
+  let(:valid_attributes) { { "name" => "MyString", "team" => "MyTeam", "age" => "1", "number" => "2"} }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
