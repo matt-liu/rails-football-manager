@@ -16,13 +16,10 @@
   <tbody>
     <% @players.each do |player| %>
       <tr>
-        <td><%= player.name %></td>
+        <td><%= link_to player.name, player %></td>
         <td><%= player.team %></td>
         <td><%= player.number %></td>
         <td><%= player.age %></td>
-        <td><%= link_to 'Show', player %></td>
-        <td><%= link_to 'Edit', edit_player_path(player) %></td>
-        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,7 +27,6 @@
 
 <br>
 
-<%= link_to 'New Player', new_player_path %>
 
 <h1>Coaches List</h1>
 
@@ -49,16 +45,15 @@
   <tbody>
     <% @coaches.each do |coach| %>
       <tr>
-        <td><%= coach.name %></td>
+        <td><%= link_to coach.name, coach %></td>
         <td><%= coach.team %></td>
         <td><%= coach.title %></td>
-        <td><%= link_to 'Show', coach %></td>
-        <td><%= link_to 'Edit', edit_coach_path(coach) %></td>
-        <td><%= link_to 'Destroy', coach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
-
+<br>
+<br>
+<%= link_to 'New Player', new_player_path %>
 <%= link_to 'New Coach', new_coach_path %>
