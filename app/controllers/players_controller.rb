@@ -6,10 +6,16 @@ class PlayersController < ApplicationController
   def index
       @coaches = Coach.all
     if params[:search]
+      redirect_to root_path if params[:search] == ""
       @players = Player.where("name LIKE ? OR number LIKE ?", "%#{params[:search] }%", "%#{params[:search]}%")
+      if @players.empty?
+        flash[:notice] = "This player does not exist!"
+        redirect_to root_path
+      end
     else
       @players = Player.all
     end
+
   end
 
   def find

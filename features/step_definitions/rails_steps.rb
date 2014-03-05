@@ -55,3 +55,12 @@ Then(/^I should see a list of the coaches information$/) do
   page.should have_content("Head")
 end
 
+When(/^I search with no input$/) do
+  fill_in('search', :with => '')
+end
+
+Then(/^I see the home page$/) do
+  current_path.should == root_path
+end
+
+
