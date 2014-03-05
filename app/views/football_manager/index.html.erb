@@ -1,7 +1,9 @@
-<h1>FOOTBALL MANAGER</h1>
+<h1>WELCOME TO FOOTBALL MANAGER</h1>
+
  <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
+ <% end %>
+
 <%= link_to "Players", players_path, id: 'players_id'%>
 
 <%= form_tag(players_path, method: 'get') do %>
