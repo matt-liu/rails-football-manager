@@ -3,8 +3,8 @@
 <%= link_to "Players", players_path, id: 'players_id'%>
 
 <%= form_tag(players_path, method: 'get') do %>
-  <%= text_field_tag :search, nil, placeholder: "Search by name or team number!", id: 'search'  %>
-  <%= button_tag 'Search'%>
+  <%= text_field_tag :search, nil, placeholder: "Search by name or team number!", id: 'searchField', class: 'search'  %>
+  <%= button_tag 'Search', id: 'searchButton', class: 'search'%>
 <% end %>
 
 <%= form_tag("/find", method: 'get') do %>

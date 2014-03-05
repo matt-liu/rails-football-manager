@@ -11,3 +11,32 @@
  *= require_self
  *= require_tree .
  */
+
+ h1{
+ 	border-radius: 5px;
+ 	padding: 8px;
+ 	text-align: center;
+ 	margin-bottom: 5px;
+
+ 	color:white;
+ 	background-color: pink
+ }
+
+ .search{
+ 	font-size: 110%;
+ 	position:absolute;
+ 	border-radius: 5px;
+ }
+ 
+ #searchField{
+	min-width: 300px;
+	right:75px;
+ }
+
+ #searchButton{
+ 	right:10px;
+ 	border:none;
+ 	color:white;
+ 	background-color: pink
+ }
+
