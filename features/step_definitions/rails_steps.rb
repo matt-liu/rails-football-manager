@@ -32,7 +32,16 @@ When(/^I enter a player's name and number$/) do
   fill_in('number', :with => '1')
   click_button('Find')
 end
+When(/^I enter incorrect information$/) do
+  fill_in('name', :with => 'Dan')
+  fill_in('number', :with => '2')
+  click_button('Find')
+end
 
+Then(/^I see that an error message displayed$/) do
+  page.should have_content("This player does not exist!")
+
+end
 Then(/^I see that player's information displayed$/) do
  	page.should have_content("Dan")
 end

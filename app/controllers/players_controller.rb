@@ -13,10 +13,11 @@ class PlayersController < ApplicationController
   end
 
   def find
-    unless @player.nil?
-      redirect_to player_path(@player)
-    else
+    if @player.nil?
+      flash[:notice] = "This player does not exist!"
       redirect_to root_path
+    else
+      redirect_to player_path(@player)
     end
   end
   # GET /players/1
