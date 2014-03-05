@@ -55,9 +55,9 @@ RailsFootballManager::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  
-  root 'football_manager#index' 
+
+  root 'football_manager#index'
   get '/footballmanager' => 'football_manager#index'
-  post '/footballmanager' => 'football_manager#search'
+  get '/find' => 'players#find', as: 'find'
 
 end

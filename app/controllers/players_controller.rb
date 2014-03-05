@@ -1,16 +1,24 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
-
+  before_action :find_player, only: [:find]
   # GET /players
   # GET /players.json
   def index
+
     if params[:search]
-      @players = Player.where("name LIKE ? OR number LIKE ?", "%#{params[:search]    }%", "%#{params[:search]}%")
+      @players = Player.where("name LIKE ? OR number LIKE ?", "%#{params[:search] }%", "%#{params[:search]}%")
     else
-    @players = Player.all
-  end
+      @players = Player.all
+    end
   end
 
+  def find
+    unless @player.nil?
+      redirect_to player_path(@player)
+    else
+      redirect_to root_path
+    end
+  end
   # GET /players/1
   # GET /players/1.json
   def show
@@ -74,5 +82,10 @@ class PlayersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def player_params
       params.require(:player).permit(:name, :team, :number, :age)
+    end
+
+    def find_player
+        @player = Player.where(name: params[:name], number: params[:number]).first
+
     end
 end

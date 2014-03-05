@@ -24,7 +24,13 @@ end
 
 When(/^I search for a player by their number$/) do
 	fill_in('search', :with => '1')
-	click_button('Search')
+  click_button('Search')
+end
+
+When(/^I enter a player's name and number$/) do
+  fill_in('name', :with => 'Dan')
+  fill_in('number', :with => '1')
+  click_button('Find')
 end
 
 Then(/^I see that player's information displayed$/) do
