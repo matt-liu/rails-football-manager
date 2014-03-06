@@ -85,7 +85,7 @@ class PlayersController < ApplicationController
     def set_player
       @player = Player.find(params[:id])
       rescue ActiveRecord::RecordNotFound
-      flash[:notice] = "You do not belong here"
+      flash[:notice] = "Sorry, that page does not exist"
       redirect_to root_path
     end
 
