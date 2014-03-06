@@ -20,5 +20,3 @@ load_coach.each { |array|
 	}
 
 
-
-

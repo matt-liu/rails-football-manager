@@ -3,7 +3,6 @@
 FactoryGirl.define do
   factory :coach do
     name "Bill"
-    team "TW"
     title "Head Coach"
   end
 end
