@@ -1,67 +1,14 @@
 <table id='mainTable'>
   <tr id='mainRow'>
     <td id='playersColumn'>
-
-<h1>Players List</h1>
-
-<table class='hoverTable' align='center'>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Team</th>
-      <th>Number</th>
-      <th>Age</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @players.each do |player| %>
-      <tr>
-        <td><%= link_to player.name, player %></td>
-        <td><%= player.team %></td>
-        <td><%= player.number %></td>
-        <td><%= player.age %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-
-<%= link_to 'New Player', new_player_path %>
-</td>
-<td>
-
-<h1>Coaches List</h1>
-
-<table class='hoverTable' align='center'>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Team</th>
-      <th>Title</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @coaches.each do |coach| %>
-      <tr>
-        <td><%= link_to coach.name, coach %></td>
-        <td><%= coach.team %></td>
-        <td><%= coach.title %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<%= link_to 'New Coach', new_coach_path %>
-</td>
-</tr>
+      <%= render 'player_table' %>
+      <br>
+      <%= link_to 'New Player', new_player_path %>
+    </td>
+    <td>
+      <%= render 'coaches/coaches_table' %> 
+      <br>
+      <%= link_to 'New Coach', new_coach_path %>
+    </td>
+  </tr>
 </table>

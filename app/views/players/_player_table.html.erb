@@ -1,0 +1,29 @@
+
+<h1>Players List</h1>
+
+<table class='hoverTable' align='center'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Number</th>
+      <th>Age</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players.each do |player| %>
+      <tr>
+        <td><%= link_to player.name, player %></td>
+        <td><%= player.team %></td>
+        <td><%= player.number %></td>
+        <td><%= player.age %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
