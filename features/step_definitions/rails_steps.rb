@@ -12,7 +12,7 @@ end
 
 Then(/^I should see a list of the players information$/) do
   page.should have_content("Dan")
-  page.should have_content(3)
+  page.should have_content("TeamName")
   page.should have_content(1)
   page.should have_content(25)
 end
@@ -47,7 +47,7 @@ Then(/^I see that player's information displayed$/) do
 end
 
 When(/^there is a coach named Bill$/) do
-  FactoryGirl.create(:coach)
+  FactoryGirl.create(:coach, name: "Bill")
 end
 
 Then(/^I should see a list of the coaches information$/) do
