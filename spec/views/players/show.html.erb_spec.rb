@@ -4,7 +4,7 @@ describe "players/show" do
   before(:each) do
     @player = assign(:player, stub_model(Player,
       :name => "Name",
-      :team => "Team",
+      :team_id => 3,
       :number => 1,
       :age => 2
     ))
@@ -14,7 +14,7 @@ describe "players/show" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Name/)
-    rendered.should match(/Team/)
+    rendered.should match(/3/)
     rendered.should match(/1/)
     rendered.should match(/2/)
   end

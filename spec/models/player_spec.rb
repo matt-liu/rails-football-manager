@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Player do
   it 'should not be valid without all fields' do
-  	invalid_player = FactoryGirl.build(:player, name: '', team: '', age: '', number: '')
+  	invalid_player = FactoryGirl.build(:player, name: '', age: nil, number: nil)
   	invalid_player.valid?.should be(false)
   end
 

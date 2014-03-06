@@ -5,13 +5,13 @@ describe "players/index" do
     assign(:players, [
       stub_model(Player,
         :name => "Name",
-        :team => "Team",
+        :team_id => 3,
         :number => 1,
         :age => 2
       ),
       stub_model(Player,
         :name => "Name",
-        :team => "Team",
+        :team_id => 3,
         :number => 1,
         :age => 2
       )
@@ -20,7 +20,7 @@ describe "players/index" do
     assign(:coaches, [
       stub_model(Coach,
         :name => "Name",
-        :team => "Team",
+        :team_id => 3,
         :title => "Head"
       )
     ])
@@ -30,7 +30,7 @@ describe "players/index" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tbody>tr>td", :text => "Name".to_s, :count => 3
-    assert_select "tbody>tr>td", :text => "Team".to_s, :count => 3
+    assert_select "tbody>tr>td", :text => "3".to_s, :count => 3
     assert_select "tbody>tr>td", :text => "Head".to_s, :count => 1
     assert_select "tbody>tr>td", :text => 1.to_s, :count => 2
     assert_select "tbody>tr>td", :text => 2.to_s, :count => 2

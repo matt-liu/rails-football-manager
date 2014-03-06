@@ -11,21 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140305201206) do
+ActiveRecord::Schema.define(version: 20140306171147) do
 
   create_table "coaches", force: true do |t|
     t.string   "name"
-    t.string   "team"
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "team_id"
   end
+
+  add_index "coaches", ["team_id"], name: "index_coaches_on_team_id"
 
   create_table "players", force: true do |t|
     t.string   "name"
-    t.string   "team"
     t.integer  "number"
     t.integer  "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "team_id"
+  end
+
+  add_index "players", ["team_id"], name: "index_players_on_team_id"
+
+  create_table "teams", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
