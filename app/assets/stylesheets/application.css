@@ -61,18 +61,18 @@
  	background-color: midnightblue
  }
 
-	.hoverTable{
+	.hover-table{
 		width:100%;
 		border-collapse:collapse;
 	}
-	.hoverTable td{
+	.hover-table td{
 		padding:7px; border:#4e95f4 1px solid;
 	}
 	/* Define the default color for all the table rows */
-	.hoverTable tr{
+	.hover-table tr{
 
 	}
 	/* Define the hover highlight color for the table row */
-    .hoverTable tr:hover {
+    .hover-table td:hover {
           background-color: #ffff99;
     }
