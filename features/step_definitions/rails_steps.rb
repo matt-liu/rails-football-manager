@@ -12,7 +12,7 @@ end
 
 Then(/^I should see a list of the players information$/) do
   page.should have_content("Dan")
-  page.should have_content("TW")
+  page.should have_content(3)
   page.should have_content(1)
   page.should have_content(25)
 end
