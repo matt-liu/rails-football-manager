@@ -1,0 +1,25 @@
+<h1>Coaches List</h1>
+
+<table class='hoverTable' align='center'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coaches.each do |coach| %>
+      <tr>
+        <td><%= link_to coach.name, coach %></td>
+        <td><%= coach.team_id %></td>
+        <td><%= coach.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
