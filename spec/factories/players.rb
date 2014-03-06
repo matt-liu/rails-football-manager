@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :player do
-    name "testName"
-    team_id 3
+  	association :team, :factory => :team
+    name "Name"
     number 1
     age 25
   end

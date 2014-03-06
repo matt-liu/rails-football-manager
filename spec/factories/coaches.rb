@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :coach do
-    name "Bill"
-    team_id 4
+    name "Name"
+  	association :team, :factory => :team
     title "Head Coach"
   end
 end
