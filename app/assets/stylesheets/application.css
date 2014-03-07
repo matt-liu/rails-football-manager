@@ -22,14 +22,30 @@
  	background-color: midnightblue
  }
 
+
  h1 a:link {color:white; text-decoration: none}
  h1 a:visited {color:white; text-decoration: none}
  h1 a:hover {color:white; text-decoration: none}
  h1 a:active {color:white; text-decoration: none}
+ 
+ h2{
+ 	border-radius: 5px;
+ 	padding: 12px;
+ 	text-align: center;
+ 	margin-bottom: 5px;
+
+ 	color:white;
+ 	background-color: midnightblue
+ }
+
+ /*h2 a:link {color:white; text-decoration: none}*/
+ h2 a:visited {color:white; text-decoration: none}
+ h2 a:hover {color:skyblue; text-decoration: none}
+ h2 a:active {color:white; text-decoration: none}
 
  #searchTable{
- 	position: absolute;
- 	right: 10px;
+ 	margin-left:auto;
+    margin-right:auto;
  }
 
  .notice{
@@ -52,6 +68,10 @@
 
  #searchField{
 	width: 300px;
+ }
+
+ #spacer{
+ 	width: 20px;
  }
 
  .button{
