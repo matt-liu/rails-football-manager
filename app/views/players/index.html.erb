@@ -3,8 +3,12 @@
     <td id='playersColumn'>
       <%= render 'player_table' %>
       <br>
-      <%= link_to 'New Player', new_player_path %>
-    </td>
+        <%= form_tag(players_path, method: 'get') do %>
+        <%= text_field_tag :age, nil, placeholder: "Age", id: 'age', class: 'age'  %>
+        Enter minimum age <%= button_tag 'Display', class: ' button'%>
+        <%= link_to 'New Player', new_player_path %>
+      </td>
+    <% end %>
     <td>
       <%= render 'coaches/coaches_table' %>
       <br>
