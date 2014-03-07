@@ -28,3 +28,17 @@
 	</table>
 
 	<%= link_to "Player and Coach Directory", players_path, id: 'players_id'%>
+
+	<h1>Teams</h1>
+
+<table align='center'>
+ 
+  <tbody>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= link_to team.name, team %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+	

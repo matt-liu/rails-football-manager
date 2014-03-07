@@ -6,6 +6,7 @@ RailsFootballManager::Application.routes.draw do
 
   resources :coaches
   resources :players
+  resources :teams
 
 
 end

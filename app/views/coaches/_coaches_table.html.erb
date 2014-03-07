@@ -16,7 +16,7 @@
     <% @coaches.each do |coach| %>
       <tr>
         <td><%= link_to coach.name, coach %></td>
-        <td><%= coach.team.name %></td>
+        <td><%= link_to coach.team.name, coach.team %></td>
         <td><%= coach.title %></td>
       </tr>
     <% end %>

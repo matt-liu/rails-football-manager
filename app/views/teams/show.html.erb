@@ -1,0 +1,14 @@
+<table id='mainTable'>
+  <tr id='mainRow'>
+    <td id='playersColumn'>
+      <%= render 'players/player_table' %>
+      <br>
+      <%= link_to 'New Player', new_player_path %>
+    </td>
+    <td>
+      <%= render 'coaches/coaches_table' %>
+      <br>
+      <%= link_to 'New Coach', new_coach_path %>
+    </td>
+  </tr>
+</table>

@@ -1,3 +1,5 @@
 class FootballManagerController < ApplicationController
-	def index; end
+	def index
+		@teams = Team.all
+	end
 end
