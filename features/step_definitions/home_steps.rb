@@ -34,7 +34,6 @@ When(/^I enter incorrect information$/) do
   click_button('Find')
 end
 
-
 When(/^I search for a player by their name$/) do
   fill_in('search', :with => 'Dan')
   click_button('Search')
