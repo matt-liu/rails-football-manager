@@ -6,10 +6,6 @@ Given(/^I am on the Directory$/) do
   visit players_path
 end
 
-Given(/^there is a user named "(.*?)"$/) do |player|
-  FactoryGirl.create(:player, name: player)
-end
-
 Given "there is a user with age $n and named $n" do |player_age, player_name|
 	FactoryGirl.create(:player, name: player_name, age: player_age)
 end

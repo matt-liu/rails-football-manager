@@ -32,7 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :test, :development do 
+group :test, :development do
 	gem 'capybara'
 	gem 'cucumber-rails', :require => false
 	gem 'rspec'
@@ -42,6 +42,7 @@ group :test, :development do
 	gem 'pry'
 	gem 'pry-rails'
 	gem 'database_cleaner'
+	gem 'selenium'
 end
 
 # Use ActiveModel has_secure_password
