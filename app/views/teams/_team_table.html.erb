@@ -1,0 +1,21 @@
+<h2 class="tableHeader" id='teamHeader'>Teams</h2>
+
+<table class='hover-table sortable' align='center' id='teamTable'>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th># of Players</th>
+			<th># of Coaches</th>
+		</tr>
+	</thead>
+ 
+  <tbody>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= link_to team.name, team %></td>
+        <td></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

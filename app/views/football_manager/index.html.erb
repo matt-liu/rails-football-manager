@@ -32,16 +32,6 @@
 	</tr>
 	</table>
 
-	<h2 class="tableHeader">Teams</h2>
-
-<table align='center'>
- 
-  <tbody>
-    <% @teams.each do |team| %>
-      <tr>
-        <td><%= link_to team.name, team %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+	<%= render 'teams/team_table' %>
 	
+	<h2 class='tableHeader'><%= link_to "Transfer Players", transfer_path %></h2>

@@ -89,6 +89,7 @@
 	.hover-table{
 		width:100%;
 		border-collapse:collapse;
+		margin-bottom: 5px;
 	}
 	.hover-table td{
 		padding:7px; border:#4e95f4 1px solid;
