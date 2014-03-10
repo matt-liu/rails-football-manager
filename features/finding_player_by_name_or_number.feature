@@ -6,11 +6,10 @@ Background:
  Scenario: Searching for player
  	And there is a player named Dan
  	When I search for a player by their name
- 	Then I see that player's information displayed
+ 	Then I see Dan's information displayed
 
  Scenario: Searching for player
  	And there is a player named Dan
  	When I search for a player by their number
- 	Then I see that player's information displayed
-
+ 	Then I see Dan's information displayed
 

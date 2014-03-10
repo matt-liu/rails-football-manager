@@ -1,6 +1,5 @@
 class HomePage
 include Capybara::DSL
-
 	def navigate_to
 		visit '/'
 		#TODO: root_url

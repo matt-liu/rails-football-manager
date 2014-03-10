@@ -1,39 +1,23 @@
+directory_page = DirectoryPage.new
 
-When(/^I search for the name (\w+)$/) do |name|
-  fill_in('search', :with => name)
-  click_button('Search')
+Given(/^I am on the Players and Coaches Directory$/) do
+	directory_page.navigate_to
 end
 
-When(/^I search for the number (\d+)$/) do |number|
-	fill_in('search', :with => number)
-  click_button('Search')
+Given "there is a player named $n" do |player|
+  directory_page.create(player)
 end
 
-When(/^I search for the name "(.*?)" and the number "(.*?)"$/) do |player_name, player_number|
-  fill_in('name', :with => player_name)
-  fill_in('number', :with => player_number)
-  click_button('Find')
+Given "there is a player with age $n and named $n" do |age, name|
+  directory_page.create_with_age(name, age)
 end
 
-When(/^I enter incorrect information$/) do
-  fill_in('name', :with => 'Dan')
-  fill_in('number', :with => '2')
-  click_button('Find')
+Given(/^there is a coach named (.*?)$/) do |name|
+  directory_page.create_coach(name)
 end
 
-
-When(/^I search for a player by their name$/) do
-  fill_in('search', :with => 'Dan')
-  click_button('Search')
-end
-
-When(/^I search for a player by their number$/) do
-  fill_in('search', :with => '1')
-  click_button('Search')
-end
-
-Then(/^I see the home page$/) do
-  current_path.should == root_path
+Given "there is a player on team $n named $n" do |team, name|
+  directory_page.create_with_team(team, name)
 end
 
 Then(/^I see a list of the players information$/) do
@@ -43,43 +27,11 @@ Then(/^I see a list of the players information$/) do
   find('#playerTable').should have_content(25)
 end
 
-Then(/^I see that player's information displayed$/) do
-  page.should have_content("Dan")
+Then "I see $n's information displayed" do |player_name|
+  page.should have_content(player_name)
 end
 
 Then(/^I see a list of the coaches information$/) do
   page.should have_content("Bill")
   page.should have_content("Head")
-end
-
-Then(/^I see an error message displayed$/) do
-  page.should have_content("This player does not exist!")
-end
-
-Then(/^I see "(.*?)"'s information displayed$/) do |player_name|
-  page.should have_content(player_name)
-end
-
-Then(/^I see a list of teams that includes "(.*?)"$/) do |team|
-  find('#teamHeader').should have_content("Teams")
-  find('#teamTable').should have_content(team)
-end
-
-Then(/^I see a list of players that includes "(.*?)"$/) do |player|
-  find('#playerHeader').should have_content("Players")
-  find('#playerTable').should have_content(player)
-end
-
-When(/^I click on the link for "(.*?)"$/) do |link|
-  page.should have_content(link)
-  click_link(link)
-end
-
-Then(/^I see "(.*?)" in a list of players that are on "(.*?)"$/) do |player, team|
-  find('#playerTable').should have_content(team)
-  find('#playerTable').should have_content(player)
-end
-
-Then(/^I do not see "(.*?)" on the page$/) do |player|
-  find('#playerTable').should have_no_content(player)
 end
