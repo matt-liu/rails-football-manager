@@ -1,8 +1,8 @@
 Feature: Transferring players to a different team
 
 Background:
-	Given there is a player named "Steve" on team named "Chicago Bears"
-	And there is a player named "Julie" on team named "Green Bay Packers"
+	Given there is a player on team Chicago Bears named Steve
+	And there is a player on team Green Bay Packers named Julie
 	And I am on the home page
 
 Scenario:

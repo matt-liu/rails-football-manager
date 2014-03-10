@@ -6,11 +6,11 @@ Given(/^I am on the Directory$/) do
   visit players_path
 end
 
-Given "there is a user with age $n and named $n" do |player_age, player_name|
+Given "there is a player with age $n and named $n" do |player_age, player_name|
 	FactoryGirl.create(:player, name: player_name, age: player_age)
 end
 
-Given(/^there is a coach named "(.*?)"$/) do |name|
+Given(/^there is a coach named (.*?)$/) do |name|
   FactoryGirl.create(:coach, name: name)
 end
 
@@ -89,7 +89,7 @@ Then(/^I see "(.*?)"'s information displayed$/) do |player_name|
   page.should have_content(player_name)
 end
 
-Given(/^there is a player named "(.*?)" on team named "(.*?)"$/) do |player, team|
+Given "there is a player on team $n named $n" do |team, player|
   team = FactoryGirl.create(:team, name: team)
   FactoryGirl.create(:player, name: player, team_id: team.id)
 end
