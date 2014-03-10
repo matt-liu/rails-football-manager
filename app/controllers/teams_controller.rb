@@ -6,6 +6,7 @@ class TeamsController < ApplicationController
   end
 
   def show
+    @team_name = Team.find(params[:id]).name
   	set_roster
   end
 

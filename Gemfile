@@ -37,9 +37,9 @@ group :test, :development do
 	gem 'cucumber-rails', :require => false
 	gem 'rspec'
 	gem 'rspec-rails'
-	gem 'pry'
-	gem 'factory_girl_rails'
 	gem 'factory_girl'
+	gem 'factory_girl_rails'
+	gem 'pry'
 	gem 'pry-rails'
 	gem 'database_cleaner'
 end
