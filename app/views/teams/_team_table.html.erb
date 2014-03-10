@@ -4,8 +4,7 @@
 	<thead>
 		<tr>
 			<th>Name</th>
-			<th># of Players</th>
-			<th># of Coaches</th>
+			<th>Head Coach</th>
 		</tr>
 	</thead>
  
@@ -13,9 +12,16 @@
     <% @teams.each do |team| %>
       <tr>
         <td><%= link_to team.name, team %></td>
-        <td></td>
-        <td></td>
+        <td><%= team.getHeadCoachName %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+
+
+
+
+
+
+

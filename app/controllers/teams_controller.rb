@@ -10,6 +10,7 @@ class TeamsController < ApplicationController
   	set_roster
   end
 
+
   private
     def set_roster
       @players = Team.find(params[:id]).players
@@ -19,3 +20,7 @@ class TeamsController < ApplicationController
       redirect_to root_path
     end
 end
+
+
+
+

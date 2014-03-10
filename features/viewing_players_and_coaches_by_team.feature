@@ -16,3 +16,8 @@ Scenario:
 	And I am on the home page
 	And I click on the link for "Toronto Argonauts"
 	Then I do not see "Matt" on the page
+
+Scenario:
+	Given there is a coach named "Marc Trestman" on team named "Chicago Bears" with title "Head Coach"
+	And I am on the home page
+	Then I see a list of teams that includes "Marc Trestman"
