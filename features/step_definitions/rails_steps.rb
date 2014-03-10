@@ -89,10 +89,29 @@ Then(/^I see an error message displayed$/) do
   page.should have_content("This player does not exist!")
 end
 
-Then(/^I see "(.*?)" information displayed$/) do |player_name|
-  page.should have_content("Dan")
+Then(/^I see "(.*?)"'s information displayed$/) do |player_name|
+  page.should have_content(player_name)
 end
 
+Given(/^there is a player named "(.*?)" on team named "(.*?)"$/) do |player, team|
+  team = FactoryGirl.create(:team, name: team)
+  FactoryGirl.create(:player, name: player, team_id: team.id)
+end
 
+Then(/^I see a list of teams$/) do
+  page.should have_content("Teams")
+end
 
+When(/^I click on the link for "(.*?)"$/) do |team|
+  page.should have_content(team)
+  click_link(team)
+end
 
+Then(/^I see "(.*?)" in a list of players that are on "(.*?)"$/) do |player, team|
+  page.should have_content(team)
+  page.should have_content(player)
+end
+
+Then(/^I do not see "(.*?)" on the page$/) do |player|
+  page.should have_no_content(player)
+end
