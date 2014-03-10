@@ -2,31 +2,39 @@ Given(/^I am on the home page$/) do
   visit root_path
 end
 
-Given(/^there is a user named "(.*?)"$/) do |player|
-	FactoryGirl.create(:player, name: "Dan")
+Given(/^I am on the Directory$/) do
+  visit players_path
 end
 
-Given(/^there is a coach named "(.*?)"$/) do |arg1|
-  FactoryGirl.create(:coach, name: "Bill")
+Given(/^there is a user named "(.*?)"$/) do |player|
+  FactoryGirl.create(:player, name: player)
+end
+
+Given "there is a user with age $n and named $n" do |player_age, player_name|
+	FactoryGirl.create(:player, name: player_name, age: player_age)
+end
+
+Given(/^there is a coach named "(.*?)"$/) do |name|
+  FactoryGirl.create(:coach, name: name)
 end
 
 When(/^I click on the Player and Coach directory$/) do
 	click_link("players_id")
 end
 
-When(/^I search for the name (\w+)$/) do
-  fill_in('search', :with => 'Dan')
+When(/^I search for the name (\w+)$/) do |name|
+  fill_in('search', :with => name)
   click_button('Search')
 end
 
-When(/^I search for the number (\d+)$/) do
-	fill_in('search', :with => '1')
+When(/^I search for the number (\d+)$/) do |number|
+	fill_in('search', :with => number)
   click_button('Search')
 end
 
 When(/^I search for the name "(.*?)" and the number "(.*?)"$/) do |player_name, player_number|
-  fill_in('name', :with => 'Dan')
-  fill_in('number', :with => '1')
+  fill_in('name', :with => player_name)
+  fill_in('number', :with => player_number)
   click_button('Find')
 end
 
@@ -34,6 +42,17 @@ When(/^I enter incorrect information$/) do
   fill_in('name', :with => 'Dan')
   fill_in('number', :with => '2')
   click_button('Find')
+end
+
+When(/^I enter minimum age of (.*?)$/) do |age|
+  fill_in('age', :with => age)
+  click_button('Display')
+end
+
+Then(/^I see a filtered list of players information$/) do
+  page.should have_content("Dan")
+  page.should have_content("Stephen")
+  page.should have_no_content("Matt")
 end
 
 When(/^I search for a player by their name$/) do
