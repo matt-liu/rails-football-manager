@@ -20,7 +20,6 @@
 
  	color:white;
  	background-color: midnightblue
-
  }
 
  h1 a:link {color:white; text-decoration: none}
@@ -41,7 +40,7 @@
  	background-color: midnightblue
  }
 
- #centerTable{
+ .centerTable{
  	max-width: 750px;
  	margin-right: auto;
  	margin-left: auto;
