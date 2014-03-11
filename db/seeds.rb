@@ -8,17 +8,23 @@
 Team.destroy_all
 Player.destroy_all
 Coach.destroy_all
+Game.destroy_all
 
 load_player = YAML.load_file(Rails.root.join("config","players.yml"))
-
+load_game = YAML.load_file(Rails.root.join("config","games.yml"))
 load_coach= YAML.load_file(Rails.root.join("config","coaches.yml"))
 load_team= YAML.load_file(Rails.root.join("config","teams.yml"))
+
 load_team.each { |array|
 		Team.create name: array[0]
 	}
 
 load_player.each { |array|
 		Player.create name: array[0], age: array[1], number: array[2], team: Team.where('name IS ?', array[3]).first
+	}
+
+load_game.each { |array|
+		Game.create home_team: Team.where('name IS ?', array[0]).first, away_team: Team.where('name IS ?', array[1]).first, home_team_score: array[2], away_team_score: array[3], date: array[4]
 	}
 
 load_coach.each { |array|

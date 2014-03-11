@@ -11,4 +11,11 @@ class Game < ActiveRecord::Base
 			errors.add(:away_team_id, "must be different from home team")
 		end
 	end
+
+	def winner
+		return home_team.name if home_team_score > away_team_score
+		return away_team.name if home_team_score < away_team_score
+		return 'tie' if home_team_score == away_team_score
+	end
+
 end
