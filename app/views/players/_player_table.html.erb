@@ -1,5 +1,5 @@
 
-<h2 class='tableHeader' id='playerHeader'>Players List</h2>
+<h2 class='tableHeader' id='playerHeader'>Players</h2>
 
 <table class='hover-table sortable centerTable' id='playerTable'>
   <thead>
@@ -17,7 +17,10 @@
   <tbody>
     <% @players.each do |player| %>
       <%= content_tag(:tr, :class => "draggable", :id => player.id, :name => player.name) do %>
-        <td><%= link_to player.name, player %></td>
+        <td>
+          <span class='handle'></span>
+          <%= link_to player.name, player %>
+        </td>
         <td><%= link_to player.team.name, player.team %></td>
         <td><%= player.number %></td>
         <td><%= player.age %></td>

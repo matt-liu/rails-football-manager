@@ -100,6 +100,20 @@ h3{
  	padding:3px;
  }
 
+ .handle{
+ 	display:none;
+ 	color: white;
+ 	background-color: midnightblue;
+ 	padding-left :30px;
+ 	padding-top:2px;
+ 	padding-bottom:2px;
+ 	margin-right: 5px;
+ 	border-radius: 2px;
+ }
+
+ .instruction{
+ 	padding-left: 10px;
+ }
 	.hover-table{
 		width:100%;
 		border-collapse:collapse;
