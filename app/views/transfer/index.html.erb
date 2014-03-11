@@ -2,7 +2,7 @@
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
 
-<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.9.1.js"></script>
   <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
@@ -12,8 +12,27 @@
 
     $( ".droppable" ).droppable({
       drop: function( event, ui ) {
+<<<<<<< HEAD
 
         alert($(ui.draggable).attr("id") + $(this).attr("id"));
+=======
+        $.ajax({
+          url: '/transfer',
+          type: 'post',
+          data: {
+            player_id: $(ui.draggable).attr("id"),
+            team_id: $(this).attr("id"),
+          },
+          success: function(responseText, statusText, xhr, $form) {
+            console.log("It hits success");         
+          },
+          error: function(responseText, statusText, xhr) {
+            console.log("It hits failure");
+          }
+        });
+
+        // alert($(ui.draggable).attr("id") + $(this).attr("id"));
+>>>>>>> ded25d0e558b93cb3d84a234a3d3cfd2029a6470
 
         $( this )
           .addClass( "ui-state-highlight" );

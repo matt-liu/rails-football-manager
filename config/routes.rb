@@ -7,6 +7,7 @@ RailsFootballManager::Application.routes.draw do
   get '/find' => 'players#find', as: 'find'
 
   get '/transfer' => 'transfer#index'
+  post '/transfer' => 'transfer#transfer_player'
 
   resources :coaches
   resources :players
