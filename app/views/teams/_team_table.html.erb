@@ -1,13 +1,13 @@
 <h2 class="tableHeader" id='teamHeader'>Teams</h2>
 
-<table class='hover-table sortable' align='center' id='teamTable'>
+<table class='hover-table sortable' id='centerTable'>
 	<thead>
 		<tr>
 			<th>Name</th>
 			<th>Head Coach</th>
 		</tr>
 	</thead>
- 
+
   <tbody>
     <% @teams.each do |team| %>
       <%= content_tag(:tr, :class => "droppable", :id => team.id, :name => team.name) do %>

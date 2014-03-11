@@ -42,8 +42,10 @@
  	background-color: midnightblue
  }
 
- #teamTable{
+ #centerTable{
  	max-width: 750px;
+ 	margin-right: auto;
+ 	margin-left: auto;
  }
 
  .tableHeader{
@@ -112,6 +114,7 @@ h3{
 	.hover-table tr{
 
 	}
+
 	/* Define the hover highlight color for the table row */
     .hover-table td:hover {
           background-color: #ffff99;
