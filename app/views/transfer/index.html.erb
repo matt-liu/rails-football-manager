@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.9.1.js"></script>
   <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-  
+
   <script>
   $(function() {
     $( ".draggable" ).draggable({ revert: true, helper: "clone", cursorAt: { top: 15, left: 56 }  });
@@ -13,11 +13,7 @@
     $( ".droppable" ).droppable({
       drop: function( event, ui ) {
 
-        $("#transfer").load("transfer/change",
-                  {drag_id: $(ui.draggable).attr("id"),
-                   drop_id: $(this).attr("id")});
-
-        // alert($(ui.draggable).attr("id") + $(this).attr("id"));
+        alert($(ui.draggable).attr("id") + $(this).attr("id"));
 
         $( this )
           .addClass( "ui-state-highlight" );

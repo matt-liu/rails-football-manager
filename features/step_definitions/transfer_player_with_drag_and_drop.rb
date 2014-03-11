@@ -13,7 +13,6 @@ When(/^I drag and drop that player onto that team$/) do
 	driver.navigate.to "localhost:3000/transfer"
 	element = driver.find_element(:name => 'player_name')
 	target = driver.find_element(:name => 'team_name')
-
 	driver.action.drag_and_drop(element, target).perform
 end
 
