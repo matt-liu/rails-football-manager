@@ -1,15 +1,13 @@
 <h3><%= @team_name %></h3>
 <table id='mainTable'>
-  <tr id='mainRow'>
-    <td id='playersColumn'>
+    <tr id='playersColumn'>
       <%= render 'players/player_table' %>
       <br>
-    </td>
-    <td>
+    </tr>
+    <tr id='playersColumn'>
       <%= render 'coaches/coaches_table' %>
       <br>
-    </td>
-  </tr>
+    </tr>
   <tr>
       <%= render 'games/game_table' %>
   </tr>
