@@ -2,23 +2,7 @@
 
 <h3>Listing games</h3>
 
-<table class = 'hover-table sortable' id = 'centerTable'>
-  <thead>
-    <tr>
-      <th>Game</th>
-      <th>Date</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @games.each do |game| %>
-      <tr>
-        <td><%=game.home_team.name %>(<%= game.home_team_score %>) vs <%= game.away_team.name %>(<%= game.away_team_score %>)</td>
-        <td><%= game.date %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+ <%= render 'games/game_table' %>
 
 <br>
 

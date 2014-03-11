@@ -7,6 +7,9 @@ class TeamsController < ApplicationController
 
   def show
     @team_name = Team.find(params[:id]).name
+
+    @games = Game.where(home_team_id: params[:id])
+    # @games = Game.where("home_team_id == #{params[:id]} || away_team_id== #{params[:id]} ")
   	set_roster
   end
 
