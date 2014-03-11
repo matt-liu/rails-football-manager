@@ -3,7 +3,7 @@ Feature: User views Directory
 Background:
 	Given I am on the home page
 
- Scenario: View Directory
+ Scenario:
  	And there is a player named Dan
  	And there is a coach named Bill
   When I navigate to the Player and Coach directory

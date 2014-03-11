@@ -15,11 +15,11 @@
 			<%= button_tag 'Search', id: 'searchButton', class: 'search button'%>
 		</td>
 		<% end %>
-	
+
 		<td id=spacer>
 		</td>
 
-	
+
 		<%= form_tag("/find", method: 'get') do %>
 			<td>
 				<%= text_field_tag :name, nil, placeholder: "Enter player name", id: 'nameField', class: 'search'  %>
@@ -33,5 +33,6 @@
 	</table>
 
 	<%= render 'teams/team_table' %>
-	
+
 	<h2 class='tableHeader'><%= link_to "Transfer Players", transfer_path %></h2>
+	<h2 class='tableHeader'><%= link_to "Games Directory", games_path %></h2>

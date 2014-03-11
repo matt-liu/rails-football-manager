@@ -1,4 +1,6 @@
 RailsFootballManager::Application.routes.draw do
+  resources :games
+
   root 'football_manager#index'
 
   get '/footballmanager' => 'football_manager#index'
