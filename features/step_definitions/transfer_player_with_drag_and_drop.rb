@@ -11,8 +11,8 @@ end
 When(/^I drag and drop that player onto that team$/) do
 	driver = Selenium::WebDriver.for :firefox
 	driver.navigate.to "localhost:3000/transfer"
-	element = driver.find_element(:name => 'player_name')
-	target = driver.find_element(:name => 'team_name')
+	element = driver.find_element(id: 1)
+	target = driver.find_element(name: "The Laterals")
 	driver.action.drag_and_drop(element, target).perform
 end
 

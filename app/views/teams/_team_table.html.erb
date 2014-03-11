@@ -10,7 +10,7 @@
  
   <tbody>
     <% @teams.each do |team| %>
-      <%= content_tag(:tr, :class => "droppable", :id => team.id, :name => 'team_name') do %>
+      <%= content_tag(:tr, :class => "droppable", :id => team.id, :name => team.name) do %>
         <td><%= link_to team.name, team %></td>
         <td><%= team.getHeadCoachName %></td>
       <% end %>

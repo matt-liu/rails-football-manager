@@ -1,6 +1,6 @@
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
 
   <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.9.1.js"></script>
@@ -12,13 +12,11 @@
 
     $( ".droppable" ).droppable({
       drop: function( event, ui ) {
-<<<<<<< HEAD
-
-        alert($(ui.draggable).attr("id") + $(this).attr("id"));
-=======
         $.ajax({
           url: '/transfer',
           type: 'post',
+          beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+
           data: {
             player_id: $(ui.draggable).attr("id"),
             team_id: $(this).attr("id"),
@@ -30,16 +28,12 @@
             console.log("It hits failure");
           }
         });
-
-        // alert($(ui.draggable).attr("id") + $(this).attr("id"));
->>>>>>> ded25d0e558b93cb3d84a234a3d3cfd2029a6470
-
-        $( this )
-          .addClass( "ui-state-highlight" );
-        }
+      location.reload();
+      }
     });
   });
-  </script>
+  </script> 
+  
 
 
 <h3>Transfer Players</h3>

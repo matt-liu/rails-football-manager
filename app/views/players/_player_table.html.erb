@@ -16,7 +16,7 @@
 
   <tbody>
     <% @players.each do |player| %>
-      <%= content_tag(:tr, :class => "draggable", :id => player.id, :name => "player_name") do %>
+      <%= content_tag(:tr, :class => "draggable", :id => player.id, :name => player.name) do %>
         <td><%= link_to player.name, player %></td>
         <td><%= link_to player.team.name, player.team %></td>
         <td><%= player.number %></td>
