@@ -11,11 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" id = 'home_team'>
     <%= f.label :home_team_id %><br>
     <%= f.collection_select(:home_team_id, Team.all, :id, :name)%>
   </div>
-  <div class="field">
+  <div class="field" id = 'away_team'>
     <%= f.label :away_team_id %><br>
     <%= f.collection_select(:away_team_id, Team.all, :id, :name)%>
   </div>
@@ -27,7 +27,7 @@
     <%= f.label :away_team_score %><br>
     <%= f.text_field :away_team_score %>
   </div>
-  <div class="field">
+  <div class="date">
     <%= f.label :date %><br>
     <%= f.text_field :date %>
   </div>

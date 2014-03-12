@@ -36,15 +36,14 @@ describe Team do
 	  	end
 		end
 
-		let(:team1) { FactoryGirl.create(:team,  name: 'team1' ) }
-		let(:team2) { FactoryGirl.create(:team, name: 'team2') }
+		let!(:team1) { FactoryGirl.create(:team,  name: 'team1' ) }
+		let!(:team2) { FactoryGirl.create(:team, name: 'team2') }
 
-  	let(:game1) { FactoryGirl.create(:game, home_team: team1, away_team: team2, home_team_score: 15, away_team_score: 14 ) }
-  	let(:game2) { FactoryGirl.create(:game, home_team: team1, away_team: team2, home_team_score: 15, away_team_score: 15) }
-  	let(:game3) { FactoryGirl.create(:game, home_team: team1, away_team: team2, home_team_score: 7, away_team_score: 14 ) }
+  	let!(:game1) { FactoryGirl.create(:game, home_team: team1, away_team: team2, home_team_score: 15, away_team_score: 14 ) }
+  	let!(:game2) { FactoryGirl.create(:game, home_team: team1, away_team: team2, home_team_score: 15, away_team_score: 15) }
+  	let!(:game3) { FactoryGirl.create(:game, home_team: team1, away_team: team2, home_team_score: 7, away_team_score: 14 ) }
 
 		context 'it should have wins, losses, and ties' do
-			Binding.pry
 			it 'should return number of wins' do
 				team1.wins.should eq(1)
 			end
@@ -54,6 +53,8 @@ describe Team do
 			it 'should return number of ties' do
 				team1.ties.should eq(1)
 			end
+			it 'should return number of games' do
+				team1.gamesPlayed.count.should eq(3)
+			end
 		end
-
 end

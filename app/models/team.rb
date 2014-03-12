@@ -10,7 +10,7 @@ class Team < ActiveRecord::Base
 	end
 
 	def losses
-		gamesPlayed.select { |game| game.winner != self.name || game.winner != 'tie'}.count
+		gamesPlayed.select { |game| game.winner != self.name && game.winner != 'tie'}.count
 	end
 
 	def ties
