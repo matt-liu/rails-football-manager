@@ -4,15 +4,15 @@
   <tr id='mainRow'>
     <td id='playersColumn'>
       <%= render 'player_table' %>
-      <br>
+      <div class='centered verticalSpace'>
         <%= form_tag(players_path, method: 'get') do %>
-        <%= text_field_tag :age, nil, placeholder: "Age", id: 'age', class: 'age'  %>
+        <%= text_field_tag :age, nil, placeholder: "Age", id: 'age', class: 'search'  %>
         Enter minimum age <%= button_tag 'Display', class: ' button'%>
+      </div>
       </td>
     <% end %>
     <td>
       <%= render 'coaches/coaches_table' %>
-      <br>
     </td>
   </tr>
 </table>
