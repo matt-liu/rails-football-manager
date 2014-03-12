@@ -16,7 +16,16 @@
 
   <script>
   $(function() {
-    $( ".draggable" ).draggable({ revert: true, helper: "clone", cursorAt: { top: 15, left: 25 }, handle: "span"});
+    $( ".draggable" ).draggable({ revert: true, helper: "clone", cursorAt: { top: 15, left: 25 }, handle: "span",
+         start: function(e, ui)
+          {
+            $(ui.helper).addClass("ui-draggable-helper");
+          }
+    });
+
+
+helper: "clone",
+
 
     $( ".droppable" ).droppable({
 
@@ -54,7 +63,11 @@
   <tr id='mainRow'>
     <td id='playersColumn'>
       <%= render 'players/player_table' %>
-      <div class='instruction'  >drag <span class='handle' style='margin-right: 0px; padding-left:2px; padding-right:2px'>handle</span> to a row in the team list to transfer player</div>
+      <div class='instruction centered verticalSpace'  >
+        To transfer a player, drag their 
+        <span class='handle' style='margin-right: 0px; padding-left:2px; padding-right:2px'>handle</span> 
+        to a row in the teams list
+      </div>
     </td>
     <td>
       <%= render 'teams/team_table' %>

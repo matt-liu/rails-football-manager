@@ -12,9 +12,13 @@
  *= require_tree .
  */
 
+* {
+margin: 0;
+padding: 0;
+}
+
  h1{
- 	border-radius: 5px;
- 	padding: 12px;
+ 	padding: 20px;
  	text-align: center;
  	margin-bottom: 10px;
 
@@ -40,20 +44,27 @@
  	background-color: midnightblue
  }
 
- @-moz-document url-prefix() {
-    h2 {
-        max-width:850px;
-    }
-}
-
  .centerTable{
  	max-width: 750px;
  	margin-right: auto;
  	margin-left: auto;
  }
 
+ .centered{
+ 	text-align: center;
+ 	margin-right: auto;
+ 	margin-left: auto;
+ }
+
  .tableHeader{
  	margin-top: 0px;
+ }
+
+ #mainTable{
+ 	margin-right: auto;
+ 	margin-left: auto; 	
+ 	max-width: 95%;
+ 	border-spacing: 10px;
  }
 
  h2 a:link {color:white; text-decoration: none}
@@ -83,10 +94,14 @@ h3{
  	border-radius: 5px;
  }
 
+ .verticalSpace{
+ 	padding-top: 8px;
+ }
+
 @-moz-document url-prefix() {
-    #searchField {
-        min-width: 99%;
-    }
+	#numberField{
+		width: 100px;
+	}
 }
 
  #searchField{
@@ -98,6 +113,8 @@ h3{
  }
 
  .button{
+ 	font-size: 13px;
+ 	border-radius: 2px;
  	text-decoration: none;
  	width:60px;
   	border:none;
@@ -105,6 +122,14 @@ h3{
  	background-color: midnightblue;
  	padding:3px;
  }
+
+ a.button:visited{
+ 	color:white;
+ }
+
+ .ui-draggable-helper {
+ 	background-color: white;
+}
 
  .handle{
  	display:none;
@@ -128,12 +153,7 @@ h3{
 	.hover-table td{
 		padding:7px; border:#4e95f4 1px solid;
 	}
-	/* Define the default color for all the table rows */
-	.hover-table tr{
 
-	}
-
-	/* Define the hover highlight color for the table row */
     .hover-table td:hover {
           background-color: #ffff99;
     }
