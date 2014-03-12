@@ -47,6 +47,7 @@ group :test, :development do
 end
 
 group :prouduction do
+	gem 'rails_12factor'
   gem 'pg'
 end
 

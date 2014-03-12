@@ -6,10 +6,6 @@ class TransferController < ApplicationController
 
 	def transfer_player
 		@player = Player.find(params[:player_id])
-		if @player.team_id == params[:team_id]
-				flash[:alert] = "SAME TEAM"
-	  	elsif @player.update(team_id: params[:team_id])
-	  		flash[:alert] = "SUCCESS"
-	  	end
-  	end
+	  @player.update(team_id: params[:team_id])
+	end
 end
