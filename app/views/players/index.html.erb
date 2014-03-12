@@ -6,7 +6,7 @@
       <%= render 'player_table' %>
       <div class='centered verticalSpace'>
         <%= form_tag(players_path, method: 'get') do %>
-        <%= text_field_tag :age, nil, placeholder: "Age", id: 'age', class: 'search'  %>
+        <%= text_field_tag :age, nil, placeholder: "Age", id: 'age', class: 'roundUpsize'  %>
         Enter minimum age <%= button_tag 'Display', class: ' button'%>
       </div>
       </td>

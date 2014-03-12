@@ -12,10 +12,10 @@
 	<tr>
 		<%= form_tag(players_path, method: 'get') do %>
 			<td>
-			<%= text_field_tag :search, nil, placeholder: "Search by name or number", id: 'searchField', class: 'search'  %>
+			<%= text_field_tag :search, nil, placeholder: "Search by name or number", id: 'searchField', class: 'roundUpsize'  %>
 		</td>
 		<td>
-			<%= button_tag 'Search', id: 'searchButton', class: 'search button'%>
+			<%= button_tag 'Search', id: 'searchButton', class: 'roundUpsize button'%>
 		</td>
 		<% end %>
 
@@ -25,11 +25,11 @@
 
 		<%= form_tag("/find", method: 'get') do %>
 			<td>
-				<%= text_field_tag :name, nil, placeholder: "Enter player name", id: 'nameField', class: 'search'  %>
-				<%= text_field_tag :number, nil, placeholder: "Enter player #", id: 'numberField', class: 'search'  %>
+				<%= text_field_tag :name, nil, placeholder: "Enter player name", id: 'nameField', class: 'roundUpsize'  %>
+				<%= text_field_tag :number, nil, placeholder: "Enter player #", id: 'numberField', class: 'roundUpsize'  %>
 			</td>
 			<td>
-				<%= button_tag 'Find', class: 'search button'%>
+				<%= button_tag 'Find', class: 'roundUpsize button'%>
 			</td>
 		<% end %>
 	</tr>

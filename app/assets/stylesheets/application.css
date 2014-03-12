@@ -89,13 +89,13 @@ h3{
  	text-align: center;
  }
 
- .search{
+ .roundUpsize{
  	font-size: 110%;
  	border-radius: 5px;
  }
 
  .verticalSpace{
- 	padding-top: 8px;
+ 	padding-top: 5px;
  }
 
 @-moz-document url-prefix() {
@@ -112,11 +112,15 @@ h3{
  	width: 20px;
  }
 
+ .dropdown{
+ 	background-color: midnightblue;
+ }
+
  .button{
  	font-size: 13px;
- 	border-radius: 2px;
+ 	border-radius: 5px;
  	text-decoration: none;
- 	width:60px;
+ 	width: 65px;
   	border:none;
  	color:white;
  	background-color: midnightblue;
@@ -139,7 +143,7 @@ h3{
  	padding-top:2px;
  	padding-bottom:2px;
  	margin-right: 5px;
- 	border-radius: 2px;
+ 	border-radius: 5px;
  }
 
  .instruction{
