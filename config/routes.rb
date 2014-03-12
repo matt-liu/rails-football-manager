@@ -1,5 +1,4 @@
 RailsFootballManager::Application.routes.draw do
-  resources :games
 
   root 'football_manager#index'
 
@@ -9,6 +8,7 @@ RailsFootballManager::Application.routes.draw do
   get '/transfer' => 'transfer#index'
   post '/transfer' => 'transfer#transfer_player'
 
+  resources :games
   resources :coaches
   resources :players
   resources :teams
