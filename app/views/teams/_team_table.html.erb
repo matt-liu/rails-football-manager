@@ -3,7 +3,10 @@
 <table class='hover-table sortable centerTable' id='teamTable'>
 	<thead>
 		<tr>
-			<th>Name</th>
+      <th>Name</th>
+      <th>W</th>
+      <th>L</th>
+			<th>T</th>
 			<th>Head Coach</th>
 		</tr>
 	</thead>
@@ -12,6 +15,9 @@
     <% @teams.each do |team| %>
       <%= content_tag(:tr, :class => "droppable", :id => team.id, :name => team.name) do %>
         <td><%= link_to team.name, team %></td>
+        <td><%= team.wins %></td>
+        <td><%= team.losses %></td>
+        <td><%= team.ties %></td>
         <td><%= team.getHeadCoachName %></td>
       <% end %>
     <% end %>
