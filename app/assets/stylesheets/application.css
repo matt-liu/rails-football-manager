@@ -127,6 +127,10 @@ h3{
  	padding:3px;
  }
 
+ #wideButton{
+ 	width: 95px;
+ }
+
  a.button:visited{
  	color:white;
  }
