@@ -19,6 +19,13 @@
     $( ".draggable" ).draggable({ revert: true, helper: "clone", cursorAt: { top: 15, left: 25 }, handle: "span"});
 
     $( ".droppable" ).droppable({
+
+      over: function(event, ui) {
+        $(this).css("background-color", "skyblue");
+      },
+      out: function(event, ui) {
+        $(this).css("background-color", "#FFFFFF");
+      },
       drop: function( event, ui ) {
         $.ajax({
           url: '/transfer',
@@ -30,7 +37,7 @@
             team_id: $(this).attr("id"),
           },
           success: function(responseText, statusText, xhr, $form) {
-            console.log("It hits success");         
+            console.log("It hits success");
           },
           error: function(responseText, statusText, xhr) {
             console.log("It hits failure");
@@ -40,8 +47,8 @@
       }
     });
   });
-  </script> 
-  
+  </script>
+
 <h3>Transfer Players</h3>
 <table id='mainTable'>
   <tr id='mainRow'>
