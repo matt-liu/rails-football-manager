@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -44,6 +43,11 @@ group :test, :development do
 	gem 'database_cleaner'
 	gem 'selenium'
 	gem 'selenium-webdriver'
+	gem 'sqlite3'
+end
+
+group :prouduction do
+  gem 'pg'
 end
 
 # Use ActiveModel has_secure_password
