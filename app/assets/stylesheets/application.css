@@ -40,6 +40,12 @@
  	background-color: midnightblue
  }
 
+ @-moz-document url-prefix() {
+    h2 {
+        max-width:850px;
+    }
+}
+
  .centerTable{
  	max-width: 750px;
  	margin-right: auto;
