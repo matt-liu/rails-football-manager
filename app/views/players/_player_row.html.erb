@@ -1,6 +1,6 @@
  <%= content_tag(:tr, :class => "draggable player_row", :id => player.id, :name => player.name) do %>
   <td>
-    <span class='handle'></span>
+    <span class='handle' id='handle'></span>
     <%= link_to player.name, player %>
   </td>
   <td><%= link_to player.team.name, player.team %></td>
