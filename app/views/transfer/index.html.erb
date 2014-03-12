@@ -27,7 +27,7 @@
 helper: "clone",
 
 
-    $( ".droppable" ).droppable({
+    $( ".droppable" ).droppable({ tolerance: "pointer",
 
       over: function(event, ui) {
         $(this).css("background-color", "skyblue");
@@ -64,8 +64,8 @@ helper: "clone",
     <td id='playersColumn'>
       <%= render 'players/player_table' %>
       <div class='instruction centered verticalSpace'  >
-        To transfer a player, drag their 
-        <span class='handle' style='margin-right: 0px; padding-left:2px; padding-right:2px'>handle</span> 
+        To transfer a player, drag their
+        <span class='handle' style='margin-right: 0px; padding-left:2px; padding-right:2px'>handle</span>
         to a row in the teams list
       </div>
     </td>
