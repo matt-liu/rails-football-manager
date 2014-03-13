@@ -182,7 +182,7 @@ h3{
 		margin-bottom: 5px;
 	}
 	.hover-table td{
-		padding:7px; border:#4e95f4 1px solid;
+		padding:7px; border:grey 1px dotted;
 	}
 
     .hover-table td:hover {
