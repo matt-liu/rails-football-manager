@@ -11,14 +11,13 @@ end
 When(/^I drag and drop that player onto that team$/) do
 	driver = Selenium::WebDriver.for :firefox
 	driver.navigate.to "localhost:3000/transfer"
-	element = driver.find_element(id: 1)
+	element = driver.find_element(id: 'handle')
 	target = driver.find_element(name: "The Laterals")
 	driver.action.drag_and_drop(element, target).perform
 	driver.quit
 end
 
 Then(/^that player will be assigned to that team$/) do
-	pending
   	Player.all.first.team.name.should eql("Future Bob Team")
 end
 

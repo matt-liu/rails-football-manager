@@ -23,7 +23,7 @@ padding: 0;
  	margin-bottom: 10px;
 
  	color:white;
- 	background-color: midnightblue
+ 	background-color: indianred
  }
 
  h1 a:link {color:white; text-decoration: none}
@@ -41,7 +41,7 @@ padding: 0;
  	margin-bottom: 5px;
 
  	color:white;
- 	background-color: midnightblue
+ 	background-color: indianred
  }
 
  .centerTable{
@@ -113,7 +113,7 @@ h3{
  }
 
  .dropdown{
- 	background-color: midnightblue;
+ 	background-color: indianred;
  }
 
  .button{
@@ -123,7 +123,7 @@ h3{
  	width: 65px;
   	border:none;
  	color:white;
- 	background-color: midnightblue;
+ 	background-color: indianred;
  	padding:3px;
  }
 
@@ -142,7 +142,7 @@ h3{
  .handle{
  	display:none;
  	color: white;
- 	background-color: midnightblue;
+ 	background-color: indianred;
  	padding-left :30px;
  	padding-top:2px;
  	padding-bottom:2px;
