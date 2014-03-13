@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Game</th>
-      <th>Result</th>
+      <th class='hidden'>Result</th>
       <th>Date</th>
     </tr>
   </thead>
@@ -13,7 +13,7 @@
     <% @games.each do |game| %>
       <tr>
         <td><%= game.home_team.name %>(<%= game.home_team_score %>) vs <%= game.away_team.name %>(<%= game.away_team_score %>)</td>
-        <td><%= game.result(@team_name) %></td>
+        <td class='hidden'><%= game.result(@team_name) %></td>
         <td><%= game.date %></td>
       </tr>
     <% end %>
