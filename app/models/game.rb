@@ -25,4 +25,13 @@ class Game < ActiveRecord::Base
 		return 'tie' if home_team_score == away_team_score
 	end
 
+	def result(team)
+		if winner == 'tie'
+			return 'T'
+		elsif winner == team
+			return 'W'
+		else
+			return 'L'
+		end
+	end
 end
