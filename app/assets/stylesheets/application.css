@@ -24,12 +24,12 @@ padding: 0;
  	margin-bottom: 10px;
 
  	color:white;
- 	background-color: indianred
+ 	background-color: firebrick
  }
 
  h1 a:link {color:white; text-decoration: none}
  h1 a:visited {color:white; text-decoration: none}
- h1 a:hover {color:skyblue; text-decoration: none; background-color: inherit;}
+ h1 a:hover {color:indianred; text-decoration: none; background-color: inherit;}
  h1 a:active {color:white; text-decoration: none}
 
  h2{
@@ -42,12 +42,12 @@ padding: 0;
  	margin-bottom: 5px;
 
  	color:white;
- 	background-color: indianred
+ 	background-color: firebrick
  }
 
  h1 a:link {color:white; text-decoration: none}
  h1 a:visited {color:white; text-decoration: none}
- h1 a:hover {color:skyblue; text-decoration: none; background-color: inherit;}
+ h1 a:hover {color:indianred; text-decoration: none; background-color: inherit;}
  h1 a:active {color:white; text-decoration: none}
 
  .centerTable{
@@ -64,7 +64,7 @@ padding: 0;
 
 
  .l:hover, .r:hover{
- 	background-color: blue;
+ 	background-color: indianred;
  }
 
  .tableHeader{
@@ -80,7 +80,7 @@ padding: 0;
 
  h2 a:link {color:white; text-decoration: none}
  h2 a:visited {color:white; text-decoration: none}
- h2 a:hover {color:skyblue; background-color: inherit}
+ h2 a:hover {color:inherit; background-color: indianred}
  h2 a:active {color:white; text-decoration: none}
 
 h3{
@@ -95,7 +95,7 @@ h3{
 
  .notice{
  	color: white;
- 	background-color: firebrick;
+ 	background-color: indianred;
  	border-radius: 5px;
  	text-align: center;
  }
@@ -124,7 +124,7 @@ h3{
  }
 
  .dropdown{
- 	background-color: indianred;
+ 	background-color: firebrick;
  }
 
  .button{
@@ -134,8 +134,12 @@ h3{
  	width: 65px;
   	border:none;
  	color:white;
- 	background-color: indianred;
+ 	background-color: firebrick;
  	padding:3px;
+ }
+
+ .button:hover{
+ 	background-color: indianred;
  }
 
  #wideButton{
@@ -150,6 +154,10 @@ h3{
  	text-decoration: none;
  }
 
+ a.tableHeader:hover{
+ 	color: indianred;
+ }
+
  .ui-draggable-helper {
  	background-color: white;
 }
@@ -157,7 +165,7 @@ h3{
  .handle{
  	display:none;
  	color: white;
- 	background-color: indianred;
+ 	background-color: firebrick;
  	padding-left :30px;
  	padding-top:2px;
  	padding-bottom:2px;
@@ -174,7 +182,7 @@ h3{
 		margin-bottom: 5px;
 	}
 	.hover-table td{
-		padding:7px; border:#4e95f4 1px solid;
+		padding:7px; border:grey 1px dotted;
 	}
 
     .hover-table td:hover {
