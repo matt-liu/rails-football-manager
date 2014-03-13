@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require_tree .
+
  */
 
 * {
@@ -62,7 +63,7 @@ padding: 0;
 
  #mainTable{
  	margin-right: auto;
- 	margin-left: auto; 	
+ 	margin-left: auto;
  	max-width: 95%;
  	border-spacing: 10px;
  }

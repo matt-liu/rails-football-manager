@@ -11,7 +11,6 @@ class PlayersController < ApplicationController
         flash[:notice] = "This player does not exist!"
         redirect_to root_path
       end
-      @players = Player.find_player(params[:search])
     elsif params[:age]
       @players = Player.where("age >= #{params[:age].to_i}")
     else

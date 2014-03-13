@@ -51,6 +51,9 @@ group :prouduction do
   gem 'pg'
 end
 
+gem 'taps'
+gem "animate-rails"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
