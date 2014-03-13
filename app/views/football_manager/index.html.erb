@@ -1,11 +1,28 @@
+<script>
+    $('.r').addClass('animated bounceInLeft');
+    $('.l').addClass('animated lightSpeedIn');
+    $('.button').addClass('animated rubberBand');
+</script>
 	<% if flash[:notice] %>
 		<div class="notice"><%= flash[:notice] %></div>
+		<br/>
 	<% end %>
-	<h2 class='tableHeader'><%= link_to "Teams", teams_path %></h2>
-	<h2 class='tableHeader'><%= link_to "Games", games_path %></h2>
 
-	<h2 class='tableHeader'><%= link_to "Players and Coaches", players_path, id: 'players_id'%></h2>
-	<h2 class='tableHeader'><%= link_to "Transfer Players", transfer_path %></h2>
+	<%= link_to teams_path, class: 'tableHeader' do %>
+	<h2 class='tableHeader r'>Teams</h2>
+	<% end %><br/>
+
+	<%= link_to games_path,class: 'tableHeader' do %>
+	<h2 class='tableHeader l'>Games</h2>
+	<% end %><br/>
+
+	<%= link_to players_path, class: 'tableHeader', id: 'players_id' do %>
+	<h2 class='tableHeader r'>Players and Coaches</h2>
+	<% end %><br/>
+
+	<%= link_to transfer_path, class: 'tableHeader'  do %>
+	<h2 class='tableHeader l'>Transfer Players</h2>
+	<% end %><br/>
 
 
 	<table id=searchTable>

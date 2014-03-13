@@ -16,14 +16,14 @@
 
   <script>
   $(function() {
-    $('.draggable').addClass('animated fadeInRightBig');
+    $('.draggable').addClass('animated tada');
     $( ".draggable" ).draggable({ revert: true, helper: "clone", cursorAt: { top: 15, left: 25 }, handle: "span",
          start: function(e, ui)
           {
             $(ui.helper).addClass("ui-draggable-helper");
           }
     });
-    $('.droppable').addClass('animated fadeInLeftBig');
+    $('.droppable').addClass('animated pulse');
     $( ".droppable" ).droppable({ tolerance: "pointer",
 
       over: function(event, ui) {

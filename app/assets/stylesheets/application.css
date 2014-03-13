@@ -45,6 +45,11 @@ padding: 0;
  	background-color: indianred
  }
 
+ h1 a:link {color:white; text-decoration: none}
+ h1 a:visited {color:white; text-decoration: none}
+ h1 a:hover {color:skyblue; text-decoration: none; background-color: inherit;}
+ h1 a:active {color:white; text-decoration: none}
+
  .centerTable{
  	max-width: 750px;
  	margin-right: auto;
@@ -55,6 +60,11 @@ padding: 0;
  	text-align: center;
  	margin-right: auto;
  	margin-left: auto;
+ }
+
+
+ .l:hover, .r:hover{
+ 	background-color: blue;
  }
 
  .tableHeader{
@@ -134,6 +144,10 @@ h3{
 
  a.button:visited{
  	color:white;
+ }
+
+ a.tableHeader{
+ 	text-decoration: none;
  }
 
  .ui-draggable-helper {
