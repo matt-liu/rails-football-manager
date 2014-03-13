@@ -43,13 +43,11 @@ group :test, :development do
 	gem 'database_cleaner'
 	gem 'selenium'
 	gem 'selenium-webdriver'
-	gem 'sqlite3'
 end
 
 gem 'rails_12factor'
 gem 'pg'
 
-gem 'taps'
 gem "animate-rails"
 
 # Use ActiveModel has_secure_password
