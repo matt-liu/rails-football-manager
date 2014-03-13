@@ -17,7 +17,6 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(game_params)
-
       if @game.save
         redirect_to games_url, notice: 'Game was successfully created.'
       else
@@ -46,6 +45,9 @@ class GamesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_game
       @game = Game.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+      flash[:notice] = "Sorry, that page does not exist"
+      redirect_to root_path
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
