@@ -1,18 +1,14 @@
-<% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-<% end %>
+<style media="screen" type="text/css">
 
-  <style media="screen" type="text/css">
+.handle{
+  display: inline;
+}
 
-  .handle{
-    display: inline;
-  }
+</style>
 
-  </style>
-
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 
 <h3>Transfer Players</h3>
@@ -42,7 +38,6 @@
           }
     });
     $( ".droppable" ).droppable({ tolerance: "pointer",
-
       over: function(event, ui) {
         $(this).css("background-color", "skyblue");
       },
@@ -54,13 +49,14 @@
           url: '/transfer',
           type: 'post',
           beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
-
           data: {
             player_id: $(ui.draggable).attr("id"),
             team_id: $(this).attr("id"),
           },
           success: function(responseText, statusText, xhr, $form) {
             console.log("It hits success");
+            debugger;
+            alert($(ui.draggable).attr("name") + " has been transferred to " + $(event.target).attr("name") + "!");
           },
           error: function(responseText, statusText, xhr) {
             console.log("It hits failure");
