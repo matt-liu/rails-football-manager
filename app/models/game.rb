@@ -3,6 +3,7 @@ class Game < ActiveRecord::Base
 	belongs_to :away_team, class_name: 'Team', foreign_key: 'away_team_id'
 	validates :home_team_score, :away_team_score, :home_team_id, :away_team_id, presence: true
 	validate :home_and_away_teams_are_different
+	validate :date_not_future
 	validates :home_team_score, :away_team_score, :numericality => { :greater_than_or_equal_to => 0 }, :allow_blank => true
 
 	def home_and_away_teams_are_different
@@ -10,6 +11,7 @@ class Game < ActiveRecord::Base
 			errors.add(:away_team_id, "must be different from home team")
 		end
 	end
+
 
 	def date_not_future
 		if date > Date.current
