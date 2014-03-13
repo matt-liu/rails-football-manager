@@ -70,3 +70,31 @@ div {
     list-style: square;
   }
 }
+
+
+@-webkit-keyframes rainbow {
+  from { color: #ff0000; -webkit-box-shadow: 0 0 9px #ff0000; }
+  33% { color: #00ff00; -webkit-box-shadow: 0 0 9px #00ff00; }
+  66% { color: #0000ff; -webkit-box-shadow: 0 0 9px #0000ff; }
+  to { color: #ff0000; -webkit-box-shadow: 0 0 9px #ff0000; }
+}
+
+@-webkit-keyframes rainbow-shadow-only {
+  from { -webkit-box-shadow: 0 0 9px #ff0000; }
+  33% { -webkit-box-shadow: 0 0 9px #00ff00; }
+  66% { -webkit-box-shadow: 0 0 9px #0000ff; }
+  to { -webkit-box-shadow: 0 0 9px #ff0000; }
+}
+
+.rainbow{
+  -webkit-animation-name: rainbow;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.rainbow-shadow-only{
+  -webkit-animation-name: rainbow-shadow-only;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
