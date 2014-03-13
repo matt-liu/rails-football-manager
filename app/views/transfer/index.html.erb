@@ -14,7 +14,26 @@
   <script src="//code.jquery.com/jquery-1.9.1.js"></script>
   <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-  <script>
+
+<h3>Transfer Players</h3>
+<table id='mainTable'>
+  <tr id='mainRow'>
+    <td id='playersColumn'>
+      <%= render 'players/player_table' %>
+      <div class='instruction centered verticalSpace'  >
+        To transfer a player, drag their
+        <span class='handle' style='margin-right: 0px; padding-left:2px; padding-right:2px'>handle</span>
+        to a row in the teams list
+      </div>
+    </td>
+    <td>
+      <%= render 'teams/team_table' %>
+    </td>
+  </tr>
+</table>
+
+
+<script>
   $(function() {
     $('.draggable').addClass('animated tada');
     $( ".draggable" ).draggable({ revert: true, helper: "clone", cursorAt: { top: 15, left: 25 }, handle: "span",
@@ -54,20 +73,3 @@
     });
   });
   </script>
-
-<h3>Transfer Players</h3>
-<table id='mainTable'>
-  <tr id='mainRow'>
-    <td id='playersColumn'>
-      <%= render 'players/player_table' %>
-      <div class='instruction centered verticalSpace'  >
-        To transfer a player, drag their
-        <span class='handle' style='margin-right: 0px; padding-left:2px; padding-right:2px'>handle</span>
-        to a row in the teams list
-      </div>
-    </td>
-    <td>
-      <%= render 'teams/team_table' %>
-    </td>
-  </tr>
-</table>
