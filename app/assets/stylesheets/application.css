@@ -138,6 +138,10 @@ h3{
  	padding:3px;
  }
 
+ .button:hover{
+ 	background-color: indianred;
+ }
+
  #wideButton{
  	width: 95px;
  }
