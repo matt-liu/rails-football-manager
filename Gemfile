@@ -46,10 +46,8 @@ group :test, :development do
 	gem 'sqlite3'
 end
 
-group :prouduction do
-	gem 'rails_12factor'
-  gem 'pg'
-end
+gem 'rails_12factor'
+gem 'pg'
 
 gem 'taps'
 gem "animate-rails"

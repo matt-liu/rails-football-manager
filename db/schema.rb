@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140310214325) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "coaches", force: true do |t|
     t.string   "name"
     t.string   "title"
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140310214325) do
     t.integer  "team_id"
   end
 
-  add_index "coaches", ["team_id"], name: "index_coaches_on_team_id"
+  add_index "coaches", ["team_id"], name: "index_coaches_on_team_id", using: :btree
 
   create_table "games", force: true do |t|
     t.integer  "home_team_id"
@@ -42,7 +45,7 @@ ActiveRecord::Schema.define(version: 20140310214325) do
     t.integer  "team_id"
   end
 
-  add_index "players", ["team_id"], name: "index_players_on_team_id"
+  add_index "players", ["team_id"], name: "index_players_on_team_id", using: :btree
 
   create_table "teams", force: true do |t|
     t.string   "name"

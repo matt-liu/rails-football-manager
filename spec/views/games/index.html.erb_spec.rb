@@ -2,12 +2,10 @@ require 'spec_helper'
 
 describe "games/index" do
   before(:each) do
-    assign(:teams, [
-      FactoryGirl.create(:team),
-      FactoryGirl.create(:team, name: 'Team2')
-    ])
+    team1 = FactoryGirl.create(:team)
+    team2 = FactoryGirl.create(:team, name: 'Team2')
     assign(:games, [
-      FactoryGirl.create(:game)
+      FactoryGirl.create(:game, home_team_id: team1.id, away_team_id: team2.id)
     ])
   end
 
