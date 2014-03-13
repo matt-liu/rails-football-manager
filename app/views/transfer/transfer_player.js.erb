@@ -1,1 +1,3 @@
 $("#<%=@player.id %>").replaceWith("<%= j(render '/players/player_row', player: @player) %>");
+$("#<%=@player.id %>").addClass('animated rubberBand');
+
