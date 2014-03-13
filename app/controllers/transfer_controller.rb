@@ -10,8 +10,6 @@ class TransferController < ApplicationController
 	  respond_to do |format|
 	    if @player.update(team_id: params[:team_id])
 	      format.js { render "transfer_player", :player => @player }
-	      format.html
-	      format.json
 			end
 		end
 	 end

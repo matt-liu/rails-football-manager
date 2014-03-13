@@ -1,1 +1,1 @@
-$("#<%=@player.id %>").replaceWith("<%= j(render 'player_row', player: @player) %>");
+$("#<%=@player.id %>").replaceWith("<%= j(render '/players/player_row', player: @player) %>");
