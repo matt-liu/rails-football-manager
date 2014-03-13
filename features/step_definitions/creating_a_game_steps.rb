@@ -8,11 +8,12 @@ end
 
 When "I input the game details" do
   fill_in('game[home_team_score]', :with => "70")
-  # Binding.pry
   select("JCs", :from => "Home team")
   select("Laterals", :from => "Away team")
   fill_in('game[away_team_score]', :with => "73")
-  fill_in('game[date]', :with => "Mar 3 2014")
+  select("2012", :from => "game[date(1i)]")
+  select("May", :from => "game[date(2i)]")
+  select("4", :from => "game[date(3i)]")
 end
 
 When(/^I submit the game$/) do

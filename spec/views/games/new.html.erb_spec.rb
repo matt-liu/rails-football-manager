@@ -7,7 +7,7 @@ describe "games/new" do
       :away_team_id => 2,
       :home_team_score => 1,
       :away_team_score => 1,
-      :date => "MyString"
+      :date => "2014-02-11"
     ).as_new_record)
   end
 
@@ -18,7 +18,6 @@ describe "games/new" do
     assert_select "form[action=?][method=?]", games_path, "post" do
       assert_select "input#game_home_team_score[name=?]", "game[home_team_score]"
       assert_select "input#game_away_team_score[name=?]", "game[away_team_score]"
-      assert_select "input#game_date[name=?]", "game[date]"
     end
   end
 end

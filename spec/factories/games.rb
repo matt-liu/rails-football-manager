@@ -6,6 +6,6 @@ FactoryGirl.define do
     away_team_id 2
     home_team_score 50
     away_team_score 45
-    date "date"
+    date "2014-02-11"
   end
 end
