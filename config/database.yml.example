@@ -9,9 +9,6 @@ development:
   database: rails-football-manager_development
   pool: 5
   timeout: 5000
-  username: postgres
-  password: password
-  min_messages: WARNING
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -22,9 +19,6 @@ test: &test
   database: rails-football-manager_test
   pool: 5
   timeout: 5000
-  username: postgres
-  password: password
-  min_messages: WARNING
 
 production:
   adapter: postgresql
